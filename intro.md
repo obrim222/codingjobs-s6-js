@@ -22,8 +22,6 @@ Separation of concerns https://en.wikipedia.org/wiki/Separation_of_concerns
 
 HTML/CSS/JS are all executed on the frontend
 
-How? Download!
-
 See Chrome developer tools / network tab
 
 HTML is the starting point, and everything else get downloaded, parsed and executed by the browser.
@@ -34,7 +32,20 @@ Everywhere, like in your computer and in SpaceX shuttles
 
 Everywhere, like in "can run in your browser, and on your server"
 
-JS runs in all browsers (Chrome)
-JS runs on your backend with Node.js
+JS runs in all browsers (Chrome, Edge, Safari, Firefox)
+JS runs on servers with Node.js
 
 Most used JS engine is V8 https://v8.dev/
+
+# What does it look like?
+
+```js
+const username = 'Peter';
+
+const sayHello = (name) => {
+    const hello = `Hello ${name}!`;
+    console.log(hello);
+};
+
+sayHello(username);
+```
