@@ -9,10 +9,9 @@ const initList = function () {
 
 const appendTaskElement = function (index) {
   console.log("call with index ", index);
-  
+
   const task = document.createElement("li");
   task.innerText = taskList[index];
-  task.style = red
   tasksElement.appendChild(task);
 };
 
@@ -26,5 +25,13 @@ const addTask = function () {
 
   appendTaskElement(taskList.length - 1);
 };
+
+const button = document.querySelector("button");
+// 2 alternatives
+// button.addEventListener("click", addTask); // commented to avoid registering the same listener twice
+button.addEventListener("click", function () {
+  console.log("clicked");
+  addTask();
+});
 
 initList();
