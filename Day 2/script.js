@@ -26,6 +26,12 @@ console.log(input.value); // value is specific to elements of type input --> 'va
 console.log(document.querySelector('input[name="task"]'));
 console.log(document.querySelectorAll("input")); // we get an array: querySelectorALL!
 
+// REGISTER EVENT LISTENERS
+const button = document.getElementsByTagName("button")[0];
+button.addEventListener("click", function () {
+  console.log("clicked!");
+});
+
 // ARITHMETIC OPERATORS
 // increment
 let sum = 1;
@@ -42,7 +48,7 @@ sum++; // increment by one
 sum--; // decrement by one
 
 // + works with strings
-const text = "this";
+let text = "this";
 text = text + "that"; // -> 'thisthat'
 text += "that"; // -> 'thisthat'
 
