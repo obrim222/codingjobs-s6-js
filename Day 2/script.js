@@ -22,6 +22,10 @@ const input = document.getElementsByTagName("input")[0];
 // getting specific properties on an input element
 console.log(input.value); // value is specific to elements of type input --> 'val'
 
+// getting element(s) with a CSS selector
+console.log(document.querySelector('input[name="task"]'));
+console.log(document.querySelectorAll("input")); // we get an array: querySelectorALL!
+
 // ARITHMETIC OPERATORS
 // increment
 let sum = 1;

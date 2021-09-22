@@ -32,6 +32,10 @@ console.log("Hello from a file");
 multiline
 string`; // with backticks
 
+// quotes in quotes
+('welcome "john"'); // double quotes are not considered as string delimiters
+("welcome 'john'"); // single quotes are not considered as string delimiters
+
 // booleans
 true;
 false;
@@ -62,7 +66,6 @@ console.log("string" + "string"); // --> stringstring
 // alert('Hello')
 // display a msg to the user in a blocking "popup" + ask for a user input (string)
 // prompt('Write something')
-
 
 // VARIABLES
 
@@ -167,15 +170,14 @@ const transformName = function (name, age) {
 };
 
 // order of the params is important!
-const transformedName = transformName('John', 50); // --> JOHN is 50yo
-console.log(transformedName)
-
+const transformedName = transformName("John", 50); // --> JOHN is 50yo
+console.log(transformedName);
 
 /**
  * EXERCISE:
- * 
+ *
  * Start from a blank HTML page.
- * 
+ *
  * First part
  * - create a "connected users" list (array of objects that you create)
  * - In your script, ask the user for his/her firstname (but also if you want the lastname, etc).
@@ -183,13 +185,13 @@ console.log(transformedName)
  * - Add the user (object?) to the list of connected users
  * (- show the list of connected users in the console)
  * - Welcome the user + you can inform him/her of how many users are connected
- * 
+ *
  * Second part
  * - display the list in the page
  * - display a welcome message to the user in the page
- * 
+ *
  * Third part
  * - ask the user for info in a form
- * 
+ *
  * --> See exercise.html|js files
  */
