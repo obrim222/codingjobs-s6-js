@@ -1,0 +1,16 @@
+.square{
+  height: 400px;
+  width: 400px;
+}
+
+.blink{
+  background-color: yellow;
+
+}
+
+.blinkText{
+  color: blue;
+  font-size: 150px;
+  padding: 50px;
+
+}

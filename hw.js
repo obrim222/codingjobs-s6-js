@@ -26,6 +26,14 @@ const userList = [
     connected: false,
     numberOfComments: 60,
   },
+  {
+    name: "John",
+    age: "50  ",
+    connected: false,
+    numberOfComments: 60,
+  },
+
+
 ];
 
 //Select the list
@@ -38,17 +46,22 @@ const createPostElement = function (postObject) {
   const postTitleElement = document.createElement("h2");
   postTitleElement.innerText = postObject.name;
 
-  const postCommentElement = document.createElement("h3");
+  const postCommentElement = document.createElement("h2");
   postCommentElement.innerText = postObject.numberOfComments;
 
-  const postConnectedElement = document.createElement("h2");
-  postConnectedElement.innerText = postObject.connected;
-
-  if (postObject.connected === true) {
-    postElement.className = "green";
-  }
+  const postConnectedElement = document.createElement("div");
+  
+  postElement.appendChild(postConnectedElement);
   postElement.appendChild(postTitleElement);
   postElement.appendChild(postCommentElement);
+
+  if (postObject.connected === true) {
+    postConnectedElement.className = "green";
+  }
+  else {
+    postConnectedElement.className = "red";
+  }
+
 
   listElement.appendChild(postElement);
 };
@@ -64,5 +77,10 @@ const sortButton = document.querySelector("button#sort");
 
 sortButton.addEventListener("click", () => {
   userList.reverse();
+  
+  
+  
   displayBlogPosts();
+
+
 });
